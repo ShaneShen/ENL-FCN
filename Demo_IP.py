@@ -1,4 +1,4 @@
-# pytorch 版本 SSCDenseNet
+# pytorch 版本
 
 import torch
 import os

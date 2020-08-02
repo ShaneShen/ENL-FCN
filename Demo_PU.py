@@ -289,18 +289,9 @@ for (FLAG,curr_train_ratio) in [(2, 0.01)]:
 
     use_cuda = torch.cuda.is_available()
 
-    #model = SSDN.SSDNetModel(16, n_bands, 16) # DenseNet Model
-    #model = SSDGR.SSDGRNetModel(16, n_bands, 210, 850) # Graph reasoning Model
-    #model = SSNL.SSCDNonLModel(class_count, n_bands, 200) # Nonlocal Model
-    #model = CCNet.SSCDNonLModel(class_count, n_bands, 200) # Criss Cross Model CCNer
+
     model = CCCon2B.SSCDNonLModel(class_count, n_bands, 200) # Criss Cross Model CCNet 2B parallel
-    #model = ADDCONV.SSCDNonLModel(16, n_bands, 200)      # only add 1*1 conv
-    #model = CCCon2B.SSCDNonLModel(16, n_bands, 200)  # ccnet concat 2b
 
-    #model = NLGR.SSCDNLGRModel(16, n_bands, 200)
-    #model = SSDND.SSDNetModel_Depth(class_count, n_bands, 200) #depth
-
-    #model = torch.nn.DataParallel(model)
     print(model)
     if use_cuda: torch.backends.cudnn.benchmark = True
     if use_cuda: model.cuda()
@@ -351,16 +342,7 @@ for (FLAG,curr_train_ratio) in [(2, 0.01)]:
             OA=np.round(OA*100, decimals=2)
             OutputWhole = PatchStack(Output, m, n, patch_height, patch_width, split_height, split_width, EDGE, class_count+1)
             Draw_Classification_Map(OutputWhole, 'ResultsImage/' + dataset_name + '_NL_' + str(train_ratio) + '_' + str(OA))
-        # if eep==380:
-        #     output=Testoutput.data[0].cpu().numpy()
-        #     idx = np.argmax(output, axis=0)
-        #     OA=np.round(OA*100, decimals=2)
-        #     Draw_Classification_Map(idx, 'ResultsImage/' + dataset_name + '_CC2B_' + str(train_ratio) + '_' + str(OA))
-        # if eep==800:
-        #     np.save('attention2B30_11.npy',attention_1.data.cpu().numpy())
-        #     np.save('attention2B30_12.npy',attention_2.data.cpu().numpy())
-        #     np.save('attention2B30_21.npy',att21.data.cpu().numpy())
-        #     np.save('attention2B30_22.npy',att22.data.cpu().numpy())
+
 
         if loss.data<=0.00005:
             break
@@ -368,16 +350,7 @@ for (FLAG,curr_train_ratio) in [(2, 0.01)]:
 
     model.train()
     model.eval()
-    # for batch_idx, (inputs, targets) in enumerate(testloader):#batch_idx是enumerate（）函数自带的索引，从0开始
-    #     if use_cuda:
-    #         inputs, targets = inputs.cuda(), targets.cuda()
-    #     inputs, targets = torch.autograd.Variable(inputs), torch.autograd.Variable(targets)
-    #     output = model(inputs)
-    #     #aa, countt=accuracy(output.data, targets.data, class_count+1)
-    #     Testoutput, attention_1, attention_2 = model(inputs)
-    #     output=Testoutput.data[0].cpu().numpy()
-    #     idx = np.argmax(output, axis=0)
-    #     Draw_Classification_Map(idx, 'ResultsImage/' + dataset_name + '_with_background_' + str(train_ratio))
+
 
 
 

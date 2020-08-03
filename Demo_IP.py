@@ -322,8 +322,6 @@ for (FLAG,curr_train_ratio) in [(1, 0.1)]:
 
 
     model = CCCon2B.SSCDNonLModel(class_count, n_bands, 150) # Criss Cross Model CCNet 2B parallel
-    #model = ADDCONV.SSCDNonLModel(class_count, n_bands, 200)      # only add 1*1 conv
-    #model = CCCon2B.SSCDNonLModel(16, n_bands, 200)  # ccnet concat 2b
 
     print(model)
     if use_cuda: torch.backends.cudnn.benchmark = True

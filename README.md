@@ -7,7 +7,7 @@ code of ENL-FCN
 
 ## Training and Testing
 put HSI dataset in Datasets folder <br>
-run the ```Demo_IP``` for Indian Pines dataset training and testing<br> 
+run the ```Demo_IP.py``` for Indian Pines dataset training and testing<br> 
 
 ## Citation
 ```

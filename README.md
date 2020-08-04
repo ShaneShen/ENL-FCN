@@ -7,10 +7,7 @@ code of ENL-FCN
 
 ## Training and Testing
 put HSI dataset in Datasets folder <br>
-run the Demo_ for HSI training and testing<br> 
-'''
-Demo_IP
-'''
+run the ```Demo_IP``` for Indian Pines dataset training and testing<br> 
 
 ## Implementation
 This work is implemented based on [CCNet](https://github.com/speedinghzl/CCNet/tree/pytorch-1.1).

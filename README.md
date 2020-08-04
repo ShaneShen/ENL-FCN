@@ -1,6 +1,6 @@
 # Efficient Deep Learning of Non-local Features for Hyperspectral Image Classification [[arXiv]](https://arxiv.org/pdf/2008.00542.pdf)
 ## Introduction
-For each pixel in an HSI, it is not only related to its nearby pixels but also has connections to pixels far away from itself. Therefore, to incorporate the long-range contextual information, a deep fully convolutional network (FCN) with an efficient non-local module, named ENL-FCN, is proposed for HSI classification. In the proposed framework, a deep FCN considers an entire HSI as input and extracts spectral-spatial information in a local receptive field. The efficient non-local module is embedded in the network as a learning unit to capture the long-range contextual information. Different from the traditional non-local neural networks, the long-range contextual information is extracted in a specially designed criss-cross path for computation efficiency.
+This work focuses on integrate long-range contextual information for HSI classification. Concretely, the efficient non-local module is embedded in the FCN  as a learning unit to capture the long-range contextual information with computation efficiency.
 
 ## Requirements
 * Ununtu 18.0 

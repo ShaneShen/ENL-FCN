@@ -6,7 +6,7 @@ Pytorch implementation of ENL-FCN
 * Pytorch 1.4 
 
 ## Training and Testing
-put HSI dataset in Datasets folder <br>
+put HSI dataset in ```Datasets``` folder <br>
 run the ```Demo_IP.py``` for Indian Pines dataset training and testing<br> 
 
 ## Citation

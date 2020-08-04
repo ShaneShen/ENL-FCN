@@ -1,4 +1,4 @@
-# Efficient Deep Learning of Non-local Features for Hyperspectral Image Classification [arXiv](https://arxiv.org/pdf/2008.00542.pdf)
+# Efficient Deep Learning of Non-local Features for Hyperspectral Image Classification [[arXiv]](https://arxiv.org/pdf/2008.00542.pdf)
 code of ENL-FCN 
 ## Requirements
 * Ununtu 18.0 
@@ -7,7 +7,10 @@ code of ENL-FCN
 
 ## Training and Testing
 put HSI dataset in Datasets folder <br>
-run the '''Demo_IP''' for Indian Pines training and testing<br> 
+run the Demo_ for HSI training and testing<br> 
+'''
+Demo_IP
+'''
 
 ## Implementation
 This work is implemented based on [CCNet](https://github.com/speedinghzl/CCNet/tree/pytorch-1.1).

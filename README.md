@@ -1,5 +1,5 @@
 # Efficient Deep Learning of Non-local Features for Hyperspectral Image Classification [[arXiv]](https://arxiv.org/pdf/2008.00542.pdf)
-Implementation for ENL-FCN 
+Pytorch implementation of ENL-FCN 
 ## Requirements
 * Ununtu 18.0 
 * python 3.7 
